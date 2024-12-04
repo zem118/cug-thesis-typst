@@ -1,13 +1,13 @@
 # 基于 Typst 的中国地质大学（武汉）学位论文模板
 
-**cug-thesis-thesis** 适用于中国地质大学（武汉）学位论文模板，具有便捷、简单、实时渲染等特性。欢迎各位同学、校友们前来 [Issues](https://github.com/Rsweater/cug-thesis-typst/issues) 交流学习~
+**cug-thesis-thesis** 适用于中国地质大学（武汉）学位论文模板，具有便捷、简单、实时渲染等特性。欢迎各位同学、校友们前来 [Issues](https://github.com/zem118/cug-thesis-typst/issues) 交流学习~
 
-![预览](https://cdn.jsdelivr.net/gh/Rsweater/images/img/preview.gif)
+
 
 ## 为什么考虑 Typst 实现学位论文模板？
 
 1. 首要是为了学习。看到 Typst 惊人的成长速度，确实有点小激动。Typst 似乎继承了 Markdown、Tex、Wiki 各自的优点于自身。
-2. 本人写文档相对来说较为粗心，使用 Word 模板会忍不住的反复去检查格式是否符合要求。又听说 Latex 写毕业论文可能后面编译一次需要几十秒~~ 虽然这个自己只是听说，但是 LaTex 在线编辑的方式 Overleaf 达到一定的编译时间收费这个是真的，就我小论文都勉强够用。自己使用开源的 Overleaf 搭建的平台功能上总是缺点什么，奈何自己又不懂~ 自己搭建的本地的 Tex 环境随解决了编译时间付费问题。但是涉及到的宏包、环境，前段时间打开突然不能用了，捣鼓半天不知是何原因~ 直至重新装了2024年的 LaTex 环境才重新运行自己的学位论文。
+2. 本人由于写文档相对来说较为粗心，使用 Word 模板会忍不住的反复去检查格式是否符合要求。又听说 Latex 写毕业论文可能后面编译一次需要几十秒~~ 虽然这个自己只是听说，但是 LaTex 在线编辑的方式 Overleaf 达到一定的编译时间收费这个是真的，就我小论文都勉强够用。自己使用开源的 Overleaf 搭建的平台功能上总是缺点什么，奈何自己又不懂~ 自己搭建的本地的 Tex 环境随解决了编译时间付费问题。但是涉及到的宏包、环境，前段时间打开突然不能用了，捣鼓半天不知是何原因~ 直至重新装了2024年的 LaTex 环境才重新运行自己的学位论文。
 3. 惊喜的发现 Typst 编译速度真的非常快~ 经过一段时间的了解，发现基本满足制作学位论文的需求，于是乎~就有了这个cug-thesis-typst。
 
 ## 参考规范
@@ -17,7 +17,7 @@
 
 ## 模板认可度问题
 
-**值得提醒的是**毕竟是民间实现模板，有不被学院认可的可能性~
+**值得提醒的是**毕竟是我自己实现模板，有不被学院认可的可能性~
 
 目前已知情况，计算机学院、地信学院对于学位论文要求不是太苛刻。去年计算机学院师兄使用了 Github 的 Latex 模板 [Timozer/CUGThesis: 中国地质大学（武汉）研究生学位论文 TeX 模板](https://github.com/Timozer/CUGThesis) 完成学位论文。
 
@@ -44,7 +44,7 @@
 2. **安装插件**：在 VS Code 中安装 [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist)
 3. **准备项目文件**：
 
-   - **方法一：Clone Repo**: 使用命令 `git clone https://github.com/Rsweater/cug-thesis-typst.git` 将整个项目克隆到本地，寻找 `template/thesis.typ`。
+   - **方法一：Clone Repo**: 使用命令 `git clone https://github.com/zem118/cug-thesis-typst.git` 将整个项目克隆到本地，寻找 `template/thesis.typ`。
    - **方法二：使用 Typst Packages**：按下 `Ctrl + Shift + P` 打开命令界面，输入 `Typst: Show available Typst templates (gallery) for picking up a template` 打开 Tinymist 提供的 Template Gallery，然后从里面找到 `cug-thesis`，点击 `❤` 按钮进行收藏，以及点击 `+` 号，就可以创建对应的论文模板了，会出现 `ref.bib` 以及 `thesis.typ`。
 4. 打开开始编写论文内容~
 
@@ -75,11 +75,11 @@
 
 ### 在线模式字体显示异常，怎么办？
 
-你需要上传 [https://github.com/Rsweater/cug-thesis-typst/tree/main/fonts/Windows-SysFonts](https://github.com/Rsweater/cug-thesis-typst/tree/main/fonts/Windows-SysFonts) 里面所有字体，将 `fonts/Windows-SysFonts` 文件夹上传至模板创建的项目根目录即可。
+你需要上传 [https://github.com/zem118/cug-thesis-typst/tree/main/fonts/Windows-SysFonts](https://github.com/zem118/cug-thesis-typst/tree/main/fonts/Windows-SysFonts) 里面所有字体，将 `fonts/Windows-SysFonts` 文件夹上传至模板创建的项目根目录即可。
 
 ### 为什么提醒类似 `unknown font family: songti sc` 的 Warning ?
 
-如果你的设备是 Windows ，会遇见所有的 `sc` 结尾的字体找不到的提醒，因为这个是 Mac OS 系统字体，可以忽略。模板为了适应不同的平台，模板默认设置了多种字体。但是只要不是两种系统的字体均报 Warning，就不会影响渲染效果。如果不想看报错，可以去 [Rsweater/cug-thesis-typst/tree/main/fonts](https://github.com/Rsweater/cug-thesis-typst/tree/main/fonts) 安装所有字体。
+如果你的设备是 Windows ，会遇见所有的 `sc` 结尾的字体找不到的提醒，因为这个是 Mac OS 系统字体，可以忽略。模板为了适应不同的平台，模板默认设置了多种字体。但是只要不是两种系统的字体均报 Warning，就不会影响渲染效果。如果不想看报错，可以去 [zem118/cug-thesis-typst/tree/main/fonts](https://github.com/zem118/cug-thesis-typst/tree/main/fonts) 安装所有字体。
 
 ## 致谢
 
